@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}-COFFEE{% endblock %}
+
+{% block header %}
+<div style="height:100px"></div>
+{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <!--<h2>COFFEE</h2>-->
+
+    <div class="row">
+        <h3>커피</h3>
+        {% for coffee in coffee_list %}
+        {% if coffee.sub_cate == '커피'%}
+        <div class="col col-md-3">
+            <img src="{{coffee.photo.url}}" class="img-thumbnail" alt="">
+            <p class="text-center">{{coffee.title}}</p>
+            <!--<div>{{coffee.desc}}</div> -->
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="row">
+        <h3>콜드브루</h3>
+        {% for coffee in coffee_list %}
+        {% if coffee.sub_cate == '콜드브루'%}
+        <div class="col col-md-3">
+            <img src="{{coffee.photo.url}}" class="img-thumbnail" alt="">
+            <p class="text-center">{{coffee.title}}</p>
+            <!--<div>{{coffee.desc}}</div> -->
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="row">
+        <h3>핸드드립</h3>
+        {% for coffee in coffee_list %}
+        {% if coffee.sub_cate == '핸드드립'%}
+        <div class="col col-md-3">
+            <img src="{{coffee.photo.url}}" class="img-thumbnail" alt="">
+            <p class="text-center">{{coffee.title}}</p>
+            <!--<div>{{coffee.desc}}</div> -->
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

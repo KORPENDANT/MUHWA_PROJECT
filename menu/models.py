@@ -5,6 +5,7 @@ from django.urls import reverse
 
 class Coffee(models.Model):
     title = models.CharField(max_length=100)
+    sub_cate = models.CharField(max_length=100, default='')
     photo = models.ImageField(upload_to='coffee/%Y/%m/%d',default='coffee/no_image.png')
     desc = models.TextField()
     
@@ -13,8 +14,8 @@ class Coffee(models.Model):
         
     def __str__(self):
         return self.title
-    def get_absolute_url(self):
-        return reverse
+    
+    
 class Beverage(models.Model):
     title = models.CharField(max_length=100)
     photo = models.ImageField(upload_to='beverage/%Y/%m/%d',default='beverage/no_image.png')
@@ -25,8 +26,6 @@ class Beverage(models.Model):
         
     def __str__(self):
         return self.title
-    def get_absolute_url(self):
-        return reverse
     
 class Desert(models.Model):
     title = models.CharField(max_length=100)
@@ -38,8 +37,6 @@ class Desert(models.Model):
         
     def __str__(self):
         return self.title
-    def get_absolute_url(self):
-        return reverse
     
 class SeasonMenu(models.Model):
     title = models.CharField(max_length=100)
@@ -51,8 +48,6 @@ class SeasonMenu(models.Model):
         
     def __str__(self):
         return self.title
-    def get_absolute_url(self):
-        return reverse
 
         
         
