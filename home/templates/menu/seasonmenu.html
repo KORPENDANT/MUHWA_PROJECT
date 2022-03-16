@@ -2,6 +2,21 @@
 
 {% block title %}-SEASONMENU{% endblock %}
 
+{% block header %}
+<div style="height:100px;"></div>
+{% endblock %}
+
 {% block contents %}
-<h2>SEASONMENU</h2>
+<div class="container">
+    <h2>SEASONMENU</h2>
+    <div class="row">
+    {% for seasonmenu in seasonmenu_list %}
+        <div class="col col-md-3">
+            <img src="{{seasonmenu.photo.url}}" class="img-thumbnail" alt="">
+            <p class="text-center">{{seasonmenu.title}}</p>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
 {% endblock %}

@@ -2,6 +2,21 @@
 
 {% block title %}-DESERT{% endblock %}
 
+{% block header %}
+<div style="height:100px;"></div>
+{% endblock %}
+
 {% block contents %}
-<h2>DESERT</h2>
+<div class="container">
+    <h2>DESERT</h2>
+    <div class="row">
+    {% for desert in desert_list %}
+        <div class="col col-md-3">
+            <img src="{{desert.photo.url}}" class="img-thumbnail" alt="">
+            <p class="text-center">{{desert.title}}</p>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
 {% endblock %}

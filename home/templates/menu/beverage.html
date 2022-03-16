@@ -2,6 +2,21 @@
 
 {% block title %}-BEVERAGE{% endblock %}
 
+{% block header %}
+<div style="height:100px;"></div>
+{% endblock %}
+
 {% block contents %}
-<h2>BEVERAGE</h2>
+<div class="container">
+    <h2>BEVERAGE</h2>
+    <div class="row">
+    {% for beverage in beverage_list %}
+        <div class="col col-md-3">
+            <img src="{{beverage.photo.url}}" class="img-thumbnail" alt="">
+            <p class="text-center">{{beverage.title}}</p>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
 {% endblock %}
