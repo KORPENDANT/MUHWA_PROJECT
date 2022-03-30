@@ -7,16 +7,33 @@
 {% endblock %}
 
 {% block contents %}
-<div class="container">
-    <h2>BEVERAGE</h2>
-    <div class="row">
-    {% for beverage in beverage_list %}
-        <div class="col col-md-3">
-            <img src="{{beverage.photo.url}}" class="img-thumbnail" alt="">
-            <p class="text-center">{{beverage.title}}</p>
+<div style="background: #deb887 ;">
+    <div class="container">
+        <!-- <h2>BEVERAGE</h2> -->
+        
+        <div class="row">
+            <h3>에이드</h3>
+        {% for beverage in beverage_list %}
+        {% if beverage.sub_cate == "에이드" %}
+            <div class="col col-md-3">
+                <img src="{{beverage.photo.url}}" class="img-thumbnail" alt="">
+                <p class="text-center">{{beverage.title}}</p>
+            </div>
+        {% endif %}
+        {% endfor %}
         </div>
-    {% endfor %}
+        
+        <div class="row">
+            <h3>차</h3>
+        {% for beverage in beverage_list %}
+        {% if beverage.sub_cate == "차" %}
+            <div class="col col-md-3">
+                <img src="{{beverage.photo.url}}" class="img-thumbnail" alt="">
+                <p class="text-center">{{beverage.title}}</p>
+            </div>
+        {% endif %}
+        {% endfor %}
+        </div>
     </div>
-</div>
 
 {% endblock %}

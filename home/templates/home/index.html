@@ -8,66 +8,124 @@
 <header class="masthead text-center text-white">
     <div class="masthead-content">
         <div class="container px-5">
-            <h1 class="masthead-heading mb-0">One Page Wonder</h1>
-            <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2>
-            <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
+            <h1 class="masthead-heading mb-0">MUHWA COFFEE</h1>
+            <h2 class="masthead-subheading mb-0">THE BEST TASTE</h2>
         </div>
     </div>
-    <div class="bg-circle-1 bg-circle"></div>
-    <div class="bg-circle-2 bg-circle"></div>
-    <div class="bg-circle-3 bg-circle"></div>
-    <div class="bg-circle-4 bg-circle"></div>
 </header>
 {% endblock %}
 
 {% block contents %}
  <!-- Content section 1-->
  <section id="scroll">
-    <div class="container px-5">
+    <div class="container px-5 bg-light">
         <div class="row gx-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'img/01.jpg' %}" alt="..." /></div>
+                <a href="{% url 'home:story' %}">
+                    <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'img/01.jpg' %}" alt="..." />
+                    </div>
+                </a>
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
-                    <h2 class="display-4">For those about to rock...</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                    <h2 class="display-4">감탄이 나오는 풍경</h2>
+                    <p> 최고의 풍경을 자랑하는 커피숍입니다. 
+                        햇빛이있는 낮이나 야경이 훤히보이는 밤 통창으로 아주 잘 느끼실수 있습니다. 
+                        저희 커피숍에 매력이기도 하죠.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- Content section 2-->
 <section>
     <div class="container px-5">
-        <div class="row gx-5 align-items-center">
+        <div class="row gx-5 align-items-center x">
+            
             <div class="col-lg-6">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'img/02.jpg' %}" alt="..." /></div>
+                <a href="{% url 'menu:coffee' %}">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle" src="{% static 'img/main_header3.jpg' %}" alt="..." /></div>
+                    </a>
             </div>
+            
             <div class="col-lg-6">
                 <div class="p-5">
-                    <h2 class="display-4">We salute you!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                    <h2 class="display-4">따뜻한 커피</h2>
+                    <p>따뜻한 커피와 함께 맜있는 빵. 편안하게 드시고 가실수 있습니다</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- Content section 3-->
 <section>
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
+    <div class="container px-5 bg-light">
+        <div class="row gx-5 align-items-center ">
             <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'img/03.jpg' %}" alt="..." /></div>
+                <a href="{% url 'menu:beverage' %}">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle" src="{% static 'img/main_header4.jpg' %}" alt="..." />
+                    </div>
+                </a>
             </div>
             <div class="col-lg-6 order-lg-1">
+                
                 <div class="p-5">
-                    <h2 class="display-4">Let there be rock!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                    <h2 class="display-4">시원한 음료</h2>
+                    <p>만끽하실수 있는 시원한 음료</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Content section 4-->
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center x">
+            
+            <div class="col-lg-6">
+                <a href="{% url 'menu:desert' %}">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle" src="{% static 'img/main_header3.jpg' %}" alt="..." /></div>
+                    </a>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">따뜻한 음식</h2>
+                    <p>따뜻한 커피와 함께 맜있는 빵. 편안하게 드시고 가실수 있습니다</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Content section 5-->
+<section>
+    <div class="container px-5 bg-light">
+        <div class="row gx-5 align-items-center ">
+            <div class="col-lg-6 order-lg-2">
+                <a href="{% url 'menu:seasonmenu' %}">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle" src="{% static 'img/main_header4.jpg' %}" alt="..." />
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                
+                <div class="p-5">
+                    <h2 class="display-4">계절을 빛내줄 시즌매뉴</h2>
+                    <p>만끽하실수 있는 시원한 음료</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
 
