@@ -3,19 +3,36 @@
 {% block title %}-DESERT{% endblock %}
 
 {% block header %}
-<div style="height:100px;"></div>
+<div style="height:100px;  background:#deb887"></div>
 {% endblock %}
 
 {% block contents %}
-<div class="container">
-    <h2>DESERT</h2>
-    <div class="row">
-    {% for desert in desert_list %}
-        <div class="col col-md-3">
-            <img src="{{desert.photo.url}}" class="img-thumbnail" alt="">
-            <p class="text-center">{{desert.title}}</p>
-        </div>
-    {% endfor %}
+<div style=" background:#deb887 ;">
+    <div class="container">
+        <div class="row">
+            <h2>빵</h2>
+            {% for desert in desert_list %}
+            {% if desert.sub_cate == '빵'%}
+            <div class="col-6 col-md-3">
+                <img src="{{desert.photo.url}}" class="img-thumbnail" alt="">
+                <p class="text-center">{{desert.title}}</p>
+                <!--<div>{{desert.desc}}</div> -->
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>   
+        <div class="row">
+            <h2>케이크</h2>
+            {% for desert in desert_list %}
+            {% if desert.sub_cate == '케이크'%}
+            <div class="col-6 col-md-3">
+                <img src="{{desert.photo.url}}" class="img-thumbnail" alt="">
+                <p class="text-center">{{desert.title}}</p>
+                <!--<div>{{desert.desc}}</div> -->
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>    
     </div>
 </div>
 
