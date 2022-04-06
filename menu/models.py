@@ -18,6 +18,7 @@ class Coffee(models.Model):
     
 class Beverage(models.Model):
     title = models.CharField(max_length=100)
+    sub_cate = models.CharField(max_length=100, default='')
     photo = models.ImageField(upload_to='beverage/%Y/%m/%d',default='beverage/no_image.png')
     desc = models.TextField()
     
@@ -29,6 +30,7 @@ class Beverage(models.Model):
     
 class Desert(models.Model):
     title = models.CharField(max_length=100)
+    sub_cate = models.CharField(max_length=100, default='')
     photo = models.ImageField(upload_to='desert/%Y/%m/%d',default='desert/no_image.png')
     desc = models.TextField()
     
